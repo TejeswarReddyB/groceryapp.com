@@ -1,0 +1,28 @@
+<div class="wrapper">
+
+
+<h1 class ="text-center"> Login</h1>
+<form #loginForm="ngForm" (submit)="onSubmit(loginForm.value)">
+    <div class="form-group">
+        <label>User Name:</label>
+        <input type="text" name ="userName" class="form-control" [class.is-invalid]="username.invalid && username.touched"
+        required #regname #username ="ngModel" ngModel>
+        <small class="text-danger" [class.d-none]="username.untouched || username.valid">This is required field1</small>
+    </div>
+
+    <div class="form-group">
+        <label>Password</label>
+        <input  title="Password should be atleast 6 characters" type="text" name ="password" class="form-control"  [class.is-invalid]="password.invalid && password.touched"
+        required  #password ="ngModel" ngModel >
+        <small class="text-danger" [class.d-none]="password.untouched || password.valid">This is required field</small>
+    </div>
+ <input type="submit" [disabled]="loginForm.invalid" class ="btn btn-primary" value="Login" >
+ <br>
+ <br>
+
+ <a routerLink="/register" >Not yet Registered, Click Here</a>
+    
+</form>
+
+</div>
+

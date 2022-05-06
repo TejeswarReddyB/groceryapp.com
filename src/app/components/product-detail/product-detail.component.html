@@ -1,0 +1,15 @@
+<div class="wrapper">
+    <div class="text:center">
+        <div class="card" style="width: 40rem;">
+            <img src="http://rjtmobile.com/grocery/images/{{outputs.image}}" class="card- img-top"
+                alt="Image not found">
+            <div class="card-body">
+                <h3 class="card-title">{{outputs.productName}}</h3>
+                <h1>{{outputs.price | currency:'INR'}} <del>{{outputs.mrp |currency:'INR'}}</del> </h1>
+                <h6>Product Description:</h6>
+                <p class="card-text">{{outputs.description}}</p>
+                <a routerLink="#" class="btn btn-primary">Add to Cart</a>
+            </div>
+        </div>
+    </div>
+</div>

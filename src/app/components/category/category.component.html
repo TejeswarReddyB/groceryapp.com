@@ -1,0 +1,19 @@
+<div class="wrapper">
+
+
+    <h1 style="text-align :center">All Categories</h1>
+
+    <div class="row row-cols-1 row-cols-md-2">
+        <div *ngFor="let output of outputs" class="col mb-4">
+            <div class="card">
+                <a routerLink="/category/{{output.catId}}"><img src="http://rjtmobile.com/grocery/images/{{output.catImage}}" width="538" height="400"
+                    alt="Image not found"></a>
+
+                <h1 class="text-center"> {{output.catName}}</h1>
+
+
+
+            </div>
+        </div>
+    </div>
+    

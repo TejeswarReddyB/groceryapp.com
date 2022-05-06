@@ -1,0 +1,21 @@
+<div class="wrapper">
+
+
+    <h1 style="text-align :center">All Products</h1>
+
+    <div class="row row-cols-1 row-cols-md-2">
+        <div *ngFor="let output of outputs" class="col mb-3">
+            <div class="card">
+                <a routerLink="/productDetails/{{output._id}}"><img src="http://rjtmobile.com/grocery/images/{{output.image}}"  width="395" height="350"alt="Image not found"></a>
+
+                <h2 > {{output.productName}}</h2>
+                <h1>{{output.price | currency:'INR'}} <del>{{output.mrp |currency:'INR'}}</del> </h1>
+                
+               
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
